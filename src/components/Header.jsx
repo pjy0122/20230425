@@ -1,6 +1,6 @@
-import { FaChessRook } from "react-icons/fa";
+import { SiDotenv } from "react-icons/si";
 import { BiWallet } from "react-icons/bi";
-import { AiFillHeart } from "react-icons/ai";
+import { SiGodotengine } from "react-icons/si";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect } from "react";
@@ -44,9 +44,9 @@ const Header = ({ account, setAccount }) => {
   return (
     <header className="max-w-screen-xl mx-auto p-4 flex justify-between items-center font-bold">
       <Link to="/">
-        <div className="flex items-center text-main">
-          <FaChessRook size={28} />
-          <div className="ml-1 text-xl">Ble-Chess</div>
+        <div className="flex items-center text-green-500">
+          <SiDotenv size={28} />
+          <div className="ml-1 text-xl">DaDenBu</div>
         </div>
       </Link>
       <div className="flex items-center">
@@ -63,8 +63,8 @@ const Header = ({ account, setAccount }) => {
         )}
         {account ? (
           <div className="flex items-center p-2 bg-gray-800 rounded-full ml-4">
-            <div className="bg-main w-6 h-6 rounded-full flex justify-center items-center">
-              <AiFillHeart />
+            <div className="bg-green-700 w-6 h-6 rounded-full flex justify-center items-center">
+              <SiGodotengine />
             </div>
             <div className="ml-1">
               {account.substring(0, 4)}...
@@ -76,7 +76,7 @@ const Header = ({ account, setAccount }) => {
             className="flex items-center p-2 bg-gray-800 rounded-full ml-4"
             onClick={onClickAccount}
           >
-            <div className="bg-main w-6 h-6 rounded-full flex justify-center items-center">
+            <div className="bg-blue-500 w-6 h-6 rounded-full flex justify-center items-center">
               <BiWallet />
             </div>
             <div className="ml-1">Connect</div>

@@ -47,7 +47,7 @@ const Main = ({ account }) => {
     try {
       if (!contract || !account) return;
 
-      const response = await contract.methods.balanceOf().call();
+      const response = await contract.methods.balanceOf(account).call();
 
       setMyNft(response);
     } catch (error) {
@@ -68,7 +68,7 @@ const Main = ({ account }) => {
   return (
     <div>
       <Intro totalNft={totalNft} mintedNft={mintedNft} myNft={myNft} />
-      <Nfts page={page}/>
+      <Nfts page={page} mintedNft={mintedNft} />
     </div>
   );
 };
